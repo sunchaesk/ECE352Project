@@ -519,11 +519,11 @@ int main(int argc, char* argv[])
 			}
 			else if (col2 == "stop")
 			  {
-			    encoding = 1;
+			    encoding = 0b00000001;
 			  }
 			else if (col2 == "nop")
 			  {
-			    encoding = 10;
+			    encoding = 0b10000001;
 			  }
 			
 			mem[cur_address] = (char) encoding;
