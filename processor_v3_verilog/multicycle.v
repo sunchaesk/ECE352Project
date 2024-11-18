@@ -87,7 +87,7 @@ FSM		Control(
 	.PCwrite(PCWrite),.AddrSel(AddrSel),.MemRead(MemRead),.MemWrite(MemWrite),
 	.IRload(IRLoad),.R1Sel(R1Sel),.MDRload(MDRLoad),.R1R2Load(R1R2Load),
 	.ALU1(ALU1),.ALUOutWrite(ALUOutWrite),.RFWrite(RFWrite),.RegIn(RegIn),
-	.FlagWrite(FlagWrite),.ALU2(ALU2),.ALUop(ALUOp), .state(state)
+	.FlagWrite(FlagWrite),.ALU2(ALU2),.ALUop(ALUOp), .ostate(state)
 );
 
 memory	DataMem(

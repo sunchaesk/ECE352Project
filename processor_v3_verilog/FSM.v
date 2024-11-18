@@ -24,7 +24,7 @@ N, Z,
 PCwrite, AddrSel, MemRead,
 MemWrite, IRload, R1Sel, MDRload,
 R1R2Load, ALU1, ALU2, ALUop,
-ALUOutWrite, RFWrite, RegIn, FlagWrite, state
+ALUOutWrite, RFWrite, RegIn, FlagWrite, ostate
 );
 	input	[3:0] instr;
 	input	N, Z;
@@ -32,13 +32,14 @@ ALUOutWrite, RFWrite, RegIn, FlagWrite, state
 	output	PCwrite, AddrSel, MemRead, MemWrite, IRload, R1Sel, MDRload;
 	output	R1R2Load, ALU1, ALUOutWrite, RFWrite, RegIn, FlagWrite;
 	output	[2:0] ALU2, ALUop;
-	output	[3:0] state;
+	output	[3:0] ostate;
 	
-	reg [3:0]	state;
+	reg [3:0] state;
 	reg	PCwrite, AddrSel, MemRead, MemWrite, IRload, R1Sel, MDRload;
 	reg	R1R2Load, ALU1, ALUOutWrite, RFWrite, RegIn, FlagWrite;
 	reg	[2:0] ALU2, ALUop;
 	
+	assign ostate = state;
 	
 	// state constants (note: asn = add/sub/nand, asnsh = add/sub/nand/shift)
 	parameter [3:0] reset_s = 0, c1 = 1, c2 = 2, c3_asn = 3,
