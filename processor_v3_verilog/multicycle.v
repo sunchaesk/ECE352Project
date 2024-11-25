@@ -69,6 +69,7 @@ module multicycle
    wire [7:0]        T0wire, T1wire, T2wire, T3wire;
    wire              T0Ld, T1Ld, T2Ld, T3Ld;
    wire [31:0]       vdatawWire; // concat of T0~T3 wire
+   wire              X1Load, X2Load
 
 
 
