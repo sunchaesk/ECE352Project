@@ -302,11 +302,6 @@ module multicycle
                       .data(RFout1wire),.q(R1wire)
                       );
 
-   register_8bit   R2(
-                      .clock(clock),.aclr(reset),.enable(R1R2Load),
-                      .data(RFout2wire),.q(R2wire)
-                      );
-
    register_8bit   ALUOut_reg(
                               .clock(clock),.aclr(reset),.enable(ALUOutWrite),
                               .data(ALUwire),.q(ALUOut)
