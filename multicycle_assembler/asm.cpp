@@ -22,7 +22,7 @@ Change F.Martin del Campo - Nov 2015: Added cstring library and changed b and e 
 using namespace std;
 
 #define MEM_SIZE 256
-#define NUM_KEYWORDS 32
+#define NUM_KEYWORDS 19
 
 typedef struct instruction
 {
