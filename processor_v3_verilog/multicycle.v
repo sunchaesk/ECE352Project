@@ -121,7 +121,8 @@ module multicycle
 				   .T3Ld(T3Ld),
 				   .R2Sel(R2Sel),
 				   .R2Ld(R2Ld),
-				   .MemIn(MemIn)
+	   .MemIn(MemIn),
+	   .VRFWrite(
                    );
 
    memory  DataMem(
