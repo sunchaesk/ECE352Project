@@ -69,7 +69,7 @@ module multicycle
    wire [7:0]        T0wire, T1wire, T2wire, T3wire;
    wire              T0Ld, T1Ld, T2Ld, T3Ld;
    wire [31:0]       vdatawWire; // concat of T0~T3 wire
-   wire              X1Load, X2Load
+   wire              X1Load, X2Load;
 
 
 
@@ -234,7 +234,7 @@ module multicycle
                         .clock(clock),
                         .data(T1wire),
                         .enable(T1Ld),
-                        .q(vdataWire[23:16])
+     .q(vdatawWire[23:16])
                         );
    register_8bit T2reg (
                         .aclr(reset),
@@ -356,7 +356,7 @@ module multicycle
      end
 
    // ----------------------------- Counter ---------------------------- // 
-   always @ (posedge clock || posedge reset) begin
+  always @ (posedge clock or posedge reset) begin
       if (reset) counter <= 0;
       else if (state == 4'b1111) counter <= counter;
       else counter <= counter + 1;
