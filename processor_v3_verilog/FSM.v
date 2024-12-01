@@ -68,6 +68,8 @@ module FSM (
   reg PCwrite, AddrSel, MemRead, MemWrite, IRload, R1Sel, MDRload;
   reg R1R2Load, ALU1, ALUOutWrite, RFWrite, RegIn, FlagWrite;
   reg [2:0] ALU2, ALUop;
+  reg R2Sel, R2Ld, VRFWrite, X1Load, X2Load, VoutSel, T0Ld, T1Ld, T2Ld, T3Ld;
+  reg [2:0] MemIn;
 
   assign ostate = state;
 
