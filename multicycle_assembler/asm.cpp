@@ -373,7 +373,30 @@ int main(int argc, char* argv[])
 			int op1, op2;
 			int encoding;
 
-			if (col2 == "db")
+			if (col2 == "vadd") {
+				if (!extractOperands(col3, op1, op2))
+					throw "parse error";
+				
+				encoding = 0;
+				encoding = op1 << 6;
+				encoding += op2 << 4;
+				encoding |= 14;
+			}
+			else if (col2 == "vstore") {
+				if (!extractOperands(col3, op1, op2))
+					throw "parse error";
+				
+				encoding = 0;
+				encoding = op1 << 6;
+				encoding += op2 << 4;
+				encoding |= 12;
+			}
+			else if (col2 == "vload") {
+				encoding = 10;
+				encoding = op1 << 6;
+				encoding += op2 << 4;
+			}
+			else if (col2 == "db")
 			{
 				char c_encoding;
 				// single character?
