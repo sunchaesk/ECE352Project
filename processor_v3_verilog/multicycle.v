@@ -119,7 +119,7 @@ module multicycle
                    );
 
    // NOTE mux 5 to 1 that goes into
-   mux5to1_8bit (.data0x(X1wire[31:24]), // 000
+   mux5to1_8bit choose_vinput (.data0x(X1wire[31:24]), // 000
                  .data1x(X1wire[23:16]), // 001
                  .data2x(X1wire[15:8]), // 010
                  .data3x(X1wire[7:0]), // 011
