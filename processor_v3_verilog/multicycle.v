@@ -50,7 +50,7 @@ module multicycle
    wire [1:0]        R1_in;
    wire [3:0]        state;
    wire              Nwire, Zwire;
-  reg  [31:0]             counter;
+   reg  [31:0]       counter;
    reg               N, Z;
    // NOTE: new declarations for Vector Extenstion
    wire              R2Sel;
@@ -110,7 +110,18 @@ module multicycle
                    .PCwrite(PCWrite),.AddrSel(AddrSel),.MemRead(MemRead),.MemWrite(MemWrite),
                    .IRload(IRLoad),.R1Sel(R1Sel),.MDRload(MDRLoad),.R1R2Load(R1R2Load),
                    .ALU1(ALU1),.ALUOutWrite(ALUOutWrite),.RFWrite(RFWrite),.RegIn(RegIn),
-                   .FlagWrite(FlagWrite),.ALU2(ALU2),.ALUop(ALUOp), .ostate(state)
+                   .FlagWrite(FlagWrite),.ALU2(ALU2),.ALUop(ALUOp), .ostate(state),
+				   // vector stuff below this
+				   .X1Load(X1Load),
+				   .X2Load(X2Load),
+				   .VoutSel(VoutSel),
+				   .T0Ld(T0Ld),
+				   .T1Ld(T1Ld),
+				   .T2Ld(T2Ld),
+				   .T3Ld(T3Ld),
+				   .R2Sel(R2Sel),
+				   .R2Ld(R2Ld),
+				   .MemIn(MemIn)
                    );
 
    memory  DataMem(
