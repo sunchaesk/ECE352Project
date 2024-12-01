@@ -11,9 +11,9 @@ module register_32bit (
 
     input     aclr;
     input     clock;
-    input   [32:0]  data;
+    input   [31:0]  data;
     input     enable;
-    output reg  [32:0]  q;
+    output reg  [31:0]  q;
 
     always @(posedge clock, posedge aclr)
     begin
