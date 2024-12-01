@@ -48,7 +48,8 @@ module FSM (
     T2Ld,
     T3Ld,
     R2Sel,
-    R2Ld MemIn
+    R2Ld,
+    MemIn
 );
   input [3:0] instr;
   input N, Z;
