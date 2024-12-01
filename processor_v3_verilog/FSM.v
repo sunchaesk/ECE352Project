@@ -27,6 +27,7 @@ R1R2Load, ALU1, ALU2, ALUop,
 ALUOutWrite, RFWrite, RegIn, FlagWrite, ostate
 );
 	input	[3:0] instr;
+	input NOP;
 	input	N, Z;
 	input	reset, clock;
 	output	PCwrite, AddrSel, MemRead, MemWrite, IRload, R1Sel, MDRload;
