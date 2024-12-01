@@ -64,7 +64,7 @@ module FSM (
   output VRFWrite, X1Load, X2Load, VoutSel, T0Ld, T1Ld, T2Ld, T3Ld, R2Sel, R2Ld;
   output [2:0] MemIn;
 
-  reg [3:0] state;
+    reg [4:0] state;
   reg PCwrite, AddrSel, MemRead, MemWrite, IRload, R1Sel, MDRload;
   reg R1R2Load, ALU1, ALUOutWrite, RFWrite, RegIn, FlagWrite;
   reg [2:0] ALU2, ALUop;
