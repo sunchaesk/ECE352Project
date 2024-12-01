@@ -226,7 +226,7 @@ module multicycle
                         .clock(clock),
                         .data(T0wire),
                         .enable(T0Ld),
-                        .q(vdatawWire[7:0]) // REVIEW check if this is MSB or LSB (should be LSB)
+     .q(vdatawWire[31:24]) // REVIEW check if this is MSB or LSB (should be MSB)
                         );
 
    register_8bit T1reg (
@@ -234,21 +234,21 @@ module multicycle
                         .clock(clock),
                         .data(T1wire),
                         .enable(T1Ld),
-                        .q(vdataWire[15:8])
+                        .q(vdataWire[23:16])
                         );
    register_8bit T2reg (
                         .aclr(reset),
                         .clock(clock),
                         .data(T2wire),
                         .enable(T2Ld),
-                        .q(vdatawWire[23:16])
+                        .q(vdatawWire[15:8])
                         );
    register_8bit T3reg (
                         .aclr(reset),
                         .clock(clock),
                         .data(T3wire),
                         .enable(T3Ld),
-                        .q(vdatawWire[31:24])
+                        .q(vdatawWire[7:0])
                         );
 
 
