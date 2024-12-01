@@ -50,7 +50,7 @@ module multicycle
    wire [1:0]        R1_in;
    wire [3:0]        state;
    wire              Nwire, Zwire;
-   reg               counter;
+  reg  [31:0]             counter;
    reg               N, Z;
    // NOTE: new declarations for Vector Extenstion
    wire              R2Sel;
