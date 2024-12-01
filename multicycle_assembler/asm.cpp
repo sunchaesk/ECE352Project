@@ -22,7 +22,7 @@ Change F.Martin del Campo - Nov 2015: Added cstring library and changed b and e 
 using namespace std;
 
 #define MEM_SIZE 256
-#define NUM_KEYWORDS 16
+#define NUM_KEYWORDS 32
 
 typedef struct instruction
 {
@@ -36,7 +36,7 @@ bool isKeyword(string str)
 {
 	string keywords[NUM_KEYWORDS] = {"load", "store", "add", "sub", "nand", "ori",
 						  "shift", "shiftl", "shiftr", "bz", "bnz", "bpz",
-					 "org", "db", "stop", "nop"};
+					 "org", "db", "stop", "nop", "vadd", "vload", "vstore"};
 
 	for (int i = 0; i < NUM_KEYWORDS; i++)
 	{
