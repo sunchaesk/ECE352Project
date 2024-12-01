@@ -111,18 +111,18 @@ bool extractOperands (string ops, int& op1, int& op2, bool load_store = false)
 	{
 		string sop1 = ops.substr(0,comma_pos);
 		string sop2 = ops.substr(comma_pos+1);
-		if (sop1 != "k0" && sop1 != "k1" && sop1 != "k2" && sop1 != "k3")
+		if (sop1 != "k0" && sop1 != "k1" && sop1 != "k2" && sop1 != "k3" && sop1 != "x0" && sop1 != "x1" && sop1 != "x2" && sop1 != "x3")
 			return false;
 		if (load_store)
 		{
-			if (sop2 != "(k0)" && sop2 != "(k1)" && sop2 != "(k2)" && sop2 != "(k3)")
+			if (sop2 != "(k0)" && sop2 != "(k1)" && sop2 != "(k2)" && sop2 != "(k3)" && sop2 != "(x0)" && sop2 != "(x1)" && sop2 != "(x2)" && sop2 != "(x3)")
 				return false;
 			else
 				op2 = sop2[2] - '0';
 		}
 		else
 		{
-			if (sop2 != "k0" && sop2 != "k1" && sop2 != "k2" && sop2 != "k3")
+			if (sop2 != "k0" && sop2 != "k1" && sop2 != "k2" && sop2 != "k3" && sop2 != "x0" && sop2 != "x1" && sop2 != "x2" && sop2 != "x3")
 				return false;
 			else
 				op2 = sop2[1] - '0';
@@ -392,9 +392,10 @@ int main(int argc, char* argv[])
 				encoding |= 12;
 			}
 			else if (col2 == "vload") {
-				encoding = 10;
+				encoding = 0;
 				encoding = op1 << 6;
 				encoding += op2 << 4;
+				encoding |= 10;
 			}
 			else if (col2 == "db")
 			{
