@@ -58,7 +58,7 @@ module FSM (
   output PCwrite, AddrSel, MemRead, MemWrite, IRload, R1Sel, MDRload;
   output R1R2Load, ALU1, ALUOutWrite, RFWrite, RegIn, FlagWrite;
   output [2:0] ALU2, ALUop;
-  output [3:0] ostate;
+    output [4:0] ostate;
 
   // vector specific
   output VRFWrite, X1Load, X2Load, VoutSel, T0Ld, T1Ld, T2Ld, T3Ld, R2Sel, R2Ld;
