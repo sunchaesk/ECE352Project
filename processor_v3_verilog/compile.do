@@ -14,4 +14,6 @@ vlog -vlog01compat -work work extend.v
 vlog -vlog01compat -work work HEX.v
 vlog -vlog01compat -work work FSM.v
 vlog -vlog01compat -work work multicycle_tb.v
-
+vlog -vlog01compat -work work register_32bit.v
+vlog -vlog01compat -work work VRF.v
+vlog -vlog01compat -work work adder2_8bit.v
